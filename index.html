@@ -1,30 +1,40 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Will You Be My Valentine?</title>
+    <meta name="description" content="A special Valentine's Day proposal for my special someone.">
     <link rel="stylesheet" href="style.css">
+    <!-- Add a favicon for a polished look -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💖</text></svg>">
 </head>
 <body>
     <div class="container">
         <h1>💖 My Special Someone 💖</h1>
         
-        <!-- Add your photos -->
-        <div class="photo-grid">
-            <img src="photo1.jpg" alt="Our Memory">
-            <img src="photo2.jpg" alt="Our Memory">
+        <!-- Photo grid with placeholder images -->
+        <div class="photo-grid" aria-label="Our Memories">
+            <img src="photo1.jpg" alt="Our Memory 1">
+            <img src="photo2.jpg" alt="Our Memory 2">
+            <img src="photo1.jpg" alt="Our Memory 3">
+            <img src="photo2.jpg" alt="Our Memory 4">
         </div>
 
-        <div class="message">
+        <!-- Personalized message -->
+        <div class="message" aria-label="Personal Message">
             <p>[Your girlfriend's name],</p>
             <p>Every moment with you feels like a beautiful story. Will you make me the happiest person by being my Valentine?</p>
         </div>
 
+        <!-- Buttons with ARIA labels for accessibility -->
         <div class="buttons">
-            <button id="yesBtn" onclick="respondYes()">YES!</button>
-            <button id="noBtn" onmouseover="dodgeButton()">No</button>
+            <button id="yesBtn" onclick="respondYes()" aria-label="Yes, I will be your Valentine">YES!</button>
+            <button id="noBtn" onmouseover="dodgeButton()" aria-label="No, I will not be your Valentine">No</button>
         </div>
 
-        <div id="response"></div>
+        <!-- Response message container -->
+        <div id="response" aria-live="polite"></div>
     </div>
 
     <script src="script.js"></script>
