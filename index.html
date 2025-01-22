@@ -3,40 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Will You Be My Valentine?</title>
-    <meta name="description" content="A special Valentine's Day proposal for my special someone.">
-    <link rel="stylesheet" href="style.css">
-    <!-- Add a favicon for a polished look -->
+    <meta name="description" content="A modern Valentine's Day proposal experience">
+    <title>Valentine's Proposal | Let's Create Forever Memories</title>
+    <link rel="preload" href="assets/fonts/love-letter.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="css/main.css">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💖</text></svg>">
 </head>
 <body>
-    <div class="container">
-        <h1>💖 My Special Someone 💖</h1>
-        
-        <!-- Photo grid with placeholder images -->
-        <div class="photo-grid" aria-label="Our Memories">
-            <img src="photo1.jpg" alt="Our Memory 1">
-            <img src="photo2.jpg" alt="Our Memory 2">
-            <img src="photo1.jpg" alt="Our Memory 3">
-            <img src="photo2.jpg" alt="Our Memory 4">
+    <main class="proposal-container">
+        <header class="proposal-header">
+            <h1 class="gradient-text">My Forever Valentine</h1>
+            <div class="decorative-hearts">
+                <span class="heart-pulse">💖</span>
+                <span class="heart-float">💝</span>
+            </div>
+        </header>
+
+        <section class="memory-gallery" aria-label="Our cherished memories">
+            <figure class="gallery-item">
+                <img src="assets/img/memory-1.webp" alt="Our first adventure" loading="lazy">
+                <figcaption class="memory-caption">First Adventure</figcaption>
+            </figure>
+            <figure class="gallery-item">
+                <img src="assets/img/memory-2.webp" alt="Celebrating milestones" loading="lazy">
+                <figcaption class="memory-caption">Milestone Celebration</figcaption>
+            </figure>
+        </section>
+
+        <article class="love-letter">
+            <p class="salutation">My Dearest <span class="partner-name">[Name]</span>,</p>
+            <p class="message-content">Every moment with you writes a new chapter in our extraordinary story. Will you continue this beautiful journey as my Valentine and beyond?</p>
+        </article>
+
+        <div class="interaction-panel">
+            <button id="acceptButton" class="cta-button cta-primary">
+                <span class="button-content">Absolutely! Forever Yours</span>
+                <span class="button-glow"></span>
+            </button>
+            <button id="declineButton" class="cta-button cta-secondary">
+                <span class="button-content">Not This Time</span>
+                <span class="button-dodge"></span>
+            </button>
         </div>
 
-        <!-- Personalized message -->
-        <div class="message" aria-label="Personal Message">
-            <p>[Your girlfriend's name],</p>
-            <p>Every moment with you feels like a beautiful story. Will you make me the happiest person by being my Valentine?</p>
-        </div>
+        <div id="responseMessage" class="response-container" aria-live="polite"></div>
+    </main>
 
-        <!-- Buttons with ARIA labels for accessibility -->
-        <div class="buttons">
-            <button id="yesBtn" onclick="respondYes()" aria-label="Yes, I will be your Valentine">YES!</button>
-            <button id="noBtn" onmouseover="dodgeButton()" aria-label="No, I will not be your Valentine">No</button>
-        </div>
+    <canvas id="celebrationCanvas"></canvas>
 
-        <!-- Response message container -->
-        <div id="response" aria-live="polite"></div>
-    </div>
-
-    <script src="script.js"></script>
+    <script src="js/main.js" defer></script>
+    <script src="js/confetti.min.js" defer></script>
 </body>
-</html>
+</html>ß
